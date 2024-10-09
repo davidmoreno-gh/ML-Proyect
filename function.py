@@ -129,3 +129,15 @@ def plot_feature_importances(grid_search, feature_names):
     sns.barplot(x='Importance', y='Feature', data=importance_df)
     plt.title('Feature Importances')
     plt.show()
+
+def perform_cross_validation(model, X, y, cv=5):
+    cv_scores = cross_val_score(model, X, y, cv=cv, scoring='accuracy')
+    print(f"Cross-Validation Scores: {cv_scores}")
+    print(f"Mean CV Score: {cv_scores.mean()}")
+    print(f"Standard Deviation of CV Score: {cv_scores.std()}")
+
+def perform_grid_search(model, param_grid, X_train, y_train, cv=5):
+    grid_search = GridSearchCV(model, param_grid, cv=cv, scoring='accuracy')
+    grid_search.fit(X_train, y_train)
+    print("Best Parameters: ", grid_search.best_params_)
+    return grid_search
