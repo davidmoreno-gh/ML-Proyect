@@ -105,19 +105,36 @@ def train_logistic_regression(X_train, y_train):
     return log
 
 def train_random_forest(X_train, y_train, param_grid):
-    over = SMOTE(sampling_strategy=0.1)
-    under = RandomUnderSampler(sampling_strategy=0.5)
+    # Definir las columnas numéricas y categóricas
+    numeric_features = ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'hypertension', 'heart_disease']
+    categorical_features = ['gender', 'smoking_history']
+    
+    # Verificar que las columnas existen en X_train
+    missing_numeric = [col for col in numeric_features if col not in X_train.columns]
+    missing_categorical = [col for col in categorical_features if col not in X_train.columns]
+    
+    if missing_numeric or missing_categorical:
+        raise ValueError(f"Las siguientes columnas faltan en X_train: {missing_numeric + missing_categorical}")
+    
+    # Definir el preprocesador
     preprocessor = ColumnTransformer(
         transformers=[
-            ('num', StandardScaler(), ['age', 'bmi', 'HbA1c_level', 'blood_glucose_level', 'hypertension', 'heart_disease']),
-            ('cat', OneHotEncoder(), ['gender', 'smoking_history'])
+            ('num', StandardScaler(), numeric_features),
+            ('cat', OneHotEncoder(), categorical_features)
         ])
+    
+    # Definir el pipeline
+    over = SMOTE(sampling_strategy=0.1)
+    under = RandomUnderSampler(sampling_strategy=0.5)
     clf = imbPipeline(steps=[('preprocessor', preprocessor),
                              ('over', over),
                              ('under', under),
                              ('classifier', RandomForestClassifier())])
-    grid_search = GridSearchCV(clf, param_grid, cv=5)
+    
+    # Ejecutar GridSearchCV
+    grid_search = GridSearchCV(clf, param_grid, cv=5, error_score='raise')
     grid_search.fit(X_train, y_train)
+    
     return grid_search
 
 def plot_feature_importances(grid_search, feature_names):
