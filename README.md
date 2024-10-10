@@ -39,4 +39,33 @@ imblearn
 ```
 
 Puedes instalar todas las dependencias usando el archivo requirements.txt:
+```pip install -r requirements.txt```
 
+## Estructura del Proyecto
+
+Limpieza de Datos:
+
+- Eliminación de duplicados y valores irrelevantes.
+- Filtrado de categorías innecesarias.
+- Verificación de valores nulos.
+- 
+## Análisis Exploratorio de Datos (EDA):
+
+- Estadísticas descriptivas de las variables.
+- Mapas de calor para visualizar correlaciones entre las características.
+- Análisis de la distribución de la variable objetivo (diabetes).
+  
+## Modelado:
+
+- K-Nearest Neighbors (KNN): Implementación del modelo KNN con ajuste de hiperparámetros usando GridSearchCV.
+- Regresión Logística: Modelo básico de clasificación.
+- Random Forest: Utilización de este modelo junto con técnicas de balanceo de clases para mejorar la predicción.
+  
+## Evaluación del Modelo:
+
+- Matriz de confusión.
+- Métricas de rendimiento como precisión, recall, y F1-score.
+
+## Técnicas de Balanceo de Clases:
+
+Implementación de SMOTE para mejorar la predicción de la clase minoritaria.
