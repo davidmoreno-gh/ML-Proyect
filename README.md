@@ -102,3 +102,8 @@ Ejecuta el archivo diabetes_prediction.ipynb en un entorno de Jupyter Notebook p
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o crea un pull request explicando las mejoras o problemas que has encontrado.
 
+## Recursos
+- [Presentación](https://www.canva.com/design/DAGSgp8Fld8/_X72sZzLpzbL-T_SGa2h1w/edit?utm_content=DAGSgp8Fld8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+- Autores:
+  - `Laura Ortiz Alameda` - [Linkedin](https://www.linkedin.com/in/laura-ortiz-alameda/)
+  - `Jose Angel Martin Galeote` - [Linkedin](https://www.linkedin.com/in/jose-martin-galeote/)
