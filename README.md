@@ -68,4 +68,31 @@ Puedes instalar todas las dependencias usando el archivo requirements.txt:
 
 ## Técnicas de Balanceo de Clases:
 
-Implementación de SMOTE para mejorar la predicción de la clase minoritaria.
+- Implementación de SMOTE para mejorar la predicción de la clase minoritaria.
+
+
+## Resultados
+
+- El modelo Random Forest con ajuste de hiperparámetros resultó ser el mejor modelo en términos generales, alcanzando una precisión del 95% en el conjunto de prueba.
+- Las variables más importantes para predecir la diabetes fueron los niveles de glucosa en sangre y el índice de masa corporal (BMI).
+
+## Cómo Ejecutar el Proyecto
+
+Clona este repositorio:
+```git clone https://github.com/tu-usuario/diabetes-prediction.git```
+
+Instala las dependencias:
+```pip install -r requirements.txt```
+
+Ejecuta el archivo diabetes_prediction.ipynb en un entorno de Jupyter Notebook para realizar el análisis completo.
+
+## Próximos Pasos
+
+- Mejorar el manejo del desbalance de clases: Probar otras técnicas de balanceo, como Undersampling o combinaciones de técnicas de oversampling.
+- Explorar más modelos: Implementar otros modelos como XGBoost o SVM para comparar su rendimiento.
+- Optimización adicional de hiperparámetros: Realizar una búsqueda más exhaustiva para optimizar aún más los modelos.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o crea un pull request explicando las mejoras o problemas que has encontrado.
+
