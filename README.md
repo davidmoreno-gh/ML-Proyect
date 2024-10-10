@@ -41,14 +41,14 @@ imblearn
 Puedes instalar todas las dependencias usando el archivo requirements.txt:
 ```pip install -r requirements.txt```
 
-## Estructura del Proyecto
+# Estructura del Proyecto
 
-Limpieza de Datos:
+## Limpieza de Datos:
 
 - Eliminación de duplicados y valores irrelevantes.
 - Filtrado de categorías innecesarias.
 - Verificación de valores nulos.
-- 
+
 ## Análisis Exploratorio de Datos (EDA):
 
 - Estadísticas descriptivas de las variables.
