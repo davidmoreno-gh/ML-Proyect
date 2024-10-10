@@ -39,7 +39,9 @@ imblearn
 ```
 
 Puedes instalar todas las dependencias usando el archivo requirements.txt:
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
 # Estructura del Proyecto
 
@@ -79,10 +81,14 @@ Puedes instalar todas las dependencias usando el archivo requirements.txt:
 ## Cómo Ejecutar el Proyecto
 
 Clona este repositorio:
-```git clone https://github.com/tu-usuario/diabetes-prediction.git```
+```bash
+git clone https://github.com/tu-usuario/diabetes-prediction.git
+```
 
 Instala las dependencias:
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
 Ejecuta el archivo diabetes_prediction.ipynb en un entorno de Jupyter Notebook para realizar el análisis completo.
 
